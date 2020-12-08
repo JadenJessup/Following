@@ -24,10 +24,10 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "C:/Users/SCOTTJ~1/AppData/Local/Temp/tmp1mby7fst/opcontrol.c.o",
+            "C:/Users/SCOTTJ~1/AppData/Local/Temp/tmprig06vsx/opcontrol.c.o",
             "src\\opcontrol.c"
         ],
-        "directory": "C:\\Users\\Scott Jessup\\ClawbotExample2",
+        "directory": "C:\\Users\\Scott Jessup\\Desktop\\Jadens Homework\\Pros Projects\\github\\exampleproject",
         "file": "src\\opcontrol.c"
     },
     {
@@ -55,11 +55,11 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "C:/Users/SCOTTJ~1/AppData/Local/Temp/tmp1mby7fst/auto.c.o",
-            "src\\auto.c"
+            "C:/Users/SCOTTJ~1/AppData/Local/Temp/tmprig06vsx/init.c.o",
+            "src\\init.c"
         ],
-        "directory": "C:\\Users\\Scott Jessup\\ClawbotExample2",
-        "file": "src\\auto.c"
+        "directory": "C:\\Users\\Scott Jessup\\Desktop\\Jadens Homework\\Pros Projects\\github\\exampleproject",
+        "file": "src\\init.c"
     },
     {
         "arguments": [
@@ -86,10 +86,10 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "C:/Users/SCOTTJ~1/AppData/Local/Temp/tmp1mby7fst/init.c.o",
-            "src\\init.c"
+            "C:/Users/SCOTTJ~1/AppData/Local/Temp/tmprig06vsx/auto.c.o",
+            "src\\auto.c"
         ],
-        "directory": "C:\\Users\\Scott Jessup\\ClawbotExample2",
-        "file": "src\\init.c"
+        "directory": "C:\\Users\\Scott Jessup\\Desktop\\Jadens Homework\\Pros Projects\\github\\exampleproject",
+        "file": "src\\auto.c"
     }
 ]
