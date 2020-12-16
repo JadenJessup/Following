@@ -1,10 +1,10 @@
 
+
 #include "main.h"
-#include "chassis.h" // redundant, but ensures that the corresponding header file (chassis.h) is included
+#include "homeshoulder.h"
 #include "claw.h"
 #include "shoulder.h"
 #include "elbow.h"
-#include "homeshoulder.h"
 
 void operatorControl() {
    int loopCount = 0; //just a loop counter
@@ -14,7 +14,7 @@ void operatorControl() {
        //drive base control
    power = joystickGetAnalog(1, 2); // vertical axis on left joystick
   turn  = joystickGetAnalog(1, 1); // horizontal axis on left joystick
-  chassisSet(power + turn, power - turn);
+
 
 			 // controll claw with CH4 of joystick
 clawSet(joystickGetAnalog(1, 4));
@@ -46,20 +46,20 @@ printf("the loop is %d \n", loopCount);
 if(joystickGetDigital(1, 8, JOY_UP)) {
 homeShoulder(125);
 
-distance = ultrasonicGet(sonar);
-printf("the distance to object is %d", distance);
-
-
-
-
-
-
-
-
-
-
-
+int distance = ultrasonicGet(frontsonar);
+printf("the distance to object is %d \n", distance);
+if (distance > 20){
+chassisSet(100,100);
 }
-delay(50);
+else if (distance < 16){
+chassisSet(-100, -100);
+}
+else{
+  chassisSet(0, 0);
+}
+
+  }
+
+delay(60);
      }
    }

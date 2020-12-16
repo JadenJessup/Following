@@ -30,6 +30,7 @@
 #define QUAD_TOP_PORT 4
 #define QUAD_BOTTOM_PORT 3
 Encoder encoder;
+Ultrasonic frontsonar;
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus
 extern "C" {

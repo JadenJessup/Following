@@ -11,4 +11,5 @@ void initializeIO() {
 void initialize() {
 
    encoder = encoderInit(QUAD_TOP_PORT 4, QUAD_BOTTOM_PORT 3, false);
+   frontsonar = ultrasonicInit(1, 2);
 }
