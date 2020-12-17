@@ -1,6 +1,6 @@
 
-
 #include "main.h"
+#include "chassis.h"
 #include "homeshoulder.h"
 #include "claw.h"
 #include "shoulder.h"
@@ -14,6 +14,8 @@ void operatorControl() {
        //drive base control
    power = joystickGetAnalog(1, 2); // vertical axis on left joystick
   turn  = joystickGetAnalog(1, 1); // horizontal axis on left joystick
+motorSet(2, power + turn);
+motorSet(3, power - turn);
 
 
 			 // controll claw with CH4 of joystick
@@ -45,17 +47,24 @@ printf("the loop is %d \n", loopCount);
 
 if(joystickGetDigital(1, 8, JOY_UP)) {
 homeShoulder(125);
+}
 
-int distance = ultrasonicGet(frontsonar);
+
+//if(joystickGetDigital(1, 8, JOY_LEFT)) {
+if(true){
+distance = ultrasonicGet(frontsonar);
 printf("the distance to object is %d \n", distance);
 if (distance > 20){
-chassisSet(100,100);
+  motorSet(2, 60);
+  motorSet(3, -60);
 }
 else if (distance < 16){
-chassisSet(-100, -100);
+  motorSet(2, -60);
+  motorSet(3, 60);
 }
 else{
-  chassisSet(0, 0);
+  motorSet(2, 0);
+  motorSet(3, 0);
 }
 
   }
